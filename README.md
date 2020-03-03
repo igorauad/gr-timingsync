@@ -39,7 +39,8 @@ Available applications:
 
 ## Build Instructions
 
-The module works with GNU Radio v3.8 only. To build, run the following:
+The module works with GNU Radio version v3.8 or higher. To build, run the
+following:
 
 ```
 mkdir build
