@@ -1,4 +1,10 @@
-It is considered good practice to add examples in here to demonstrate the
-functionality of your OOT module. Python scripts, GRC flow graphs or other
-code can go here.
+# Examples
+
+The example in `sim_timing_analyzer.grc` can be used to verify the functionality
+of the correlator-based timing alignment analyzer. This flowgraph reads an LTE
+waveform from a file in the `data` directory and generates two signals based on
+the waveform. One of the two signals is time-delayed by a specified amount, such
+that the two signals are not perfectly time-aligned. The remaining blocks of the
+flowgraph, in turn, analyze the timing alignment error between the two simulated
+signals.
 
