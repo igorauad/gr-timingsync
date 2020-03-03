@@ -1,0 +1,34 @@
+id: timingsync_wrap_fft_index_ss
+label: wrap_fft_index_ss
+category: '[timingsync]'
+
+templates:
+  imports: import timingsync
+  make: timingsync.wrap_fft_index_ss(${fft_size}, ${log_per})
+
+parameters:
+- id: fft_size
+  label: FFT size
+  dtype: int
+- id: log_per
+  label: Debug log period
+  dtype: float
+  default: 0.0
+
+inputs:
+- label: In
+  domain: stream
+  dtype: short
+  vlen: 1
+  optional: 0
+
+outputs:
+- label: Out
+  domain: stream
+  dtype: short
+  vlen: 1
+  optional: 0
+
+#  'file_format' specifies the version of the GRC yml format used in the file
+#  and should usually not be changed.
+file_format: 1

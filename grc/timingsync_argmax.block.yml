@@ -1,0 +1,30 @@
+id: timingsync_argmax
+label: argmax
+category: '[timingsync]'
+
+templates:
+  imports: import timingsync
+  make: timingsync.argmax(${vlen})
+
+parameters:
+- id: vlen
+  label: Vector length
+  dtype: int
+
+inputs:
+- label: Vector In
+  domain: stream
+  dtype: float
+  vlen: ${ vlen }
+  optional: 0
+
+outputs:
+- label: Peak Index
+  domain: stream
+  dtype: short
+  vlen: 1
+  optional: 0
+
+#  'file_format' specifies the version of the GRC yml format used in the file
+#  and should usually not be changed.
+file_format: 1
