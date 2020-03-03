@@ -70,3 +70,17 @@ root directory:
 make
 ```
 
+## Running
+
+Change to the `apps/` directory and execute one of the two available application
+for timing alignment analysis.
+
+For example, to print periodically to the console on every second, run:
+
+```
+./timing_analyzer.py -l 1 -a serial=30E8A70
+```
+
+where `-l` determines the log periodicity and argument `-a` specified the USRP
+address, in this example `serial=30E8A70`.
+
