@@ -37,7 +37,7 @@ class qa_wrap_fft_index_ss(gr_unittest.TestCase):
         in_vec       = (4096, 0, 4095, 1, 8191, 10, 8182)
         expected_out = (-4096, 0, 4095, 1, -1, 10, -10)
         src     = blocks.vector_source_s(in_vec)
-        wrapper = timingsync.wrap_fft_index_ss(Nfft)
+        wrapper = timingsync.wrap_fft_index_ss(Nfft, 0.0)
         snk     = blocks.vector_sink_s()
         self.tb.connect(src, wrapper, snk)
         self.tb.run()
