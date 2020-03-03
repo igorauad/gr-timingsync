@@ -48,5 +48,25 @@ cmake ..
 make
 ```
 
-Then optionally install with `make install` or `sudo make install`.
+> NOTE: in case your GNU Radio installation is on a specific prefix, run the
+> `cmake` step like so:
+>
+> ```
+> cmake -DCMAKE_INSTALL_PREFIX=$PREFIX ..
+> ```
+
+Then install with:
+```
+make install
+```
+or
+```
+sudo make install
+```
+
+To build the applications that are located in the `apps` directory, run from the
+root directory:
+```
+make
+```
 
